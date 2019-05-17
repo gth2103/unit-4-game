@@ -1,11 +1,11 @@
 body{
-    color: #cccccc;
+    color: #eeeeee;
     text-shadow: 1px 1px 2px black;
 }
 
 img {
-    max-height: 175px;
-    max-width: 175px;
+    max-height: 95px;
+    max-width: 95px;
 }
 
 h2 {
@@ -17,8 +17,8 @@ h2 {
 }
 
 .character {
-    max-height: 250px;
-    max-width: 200px;
+    height: 150px;
+    width: 90px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
