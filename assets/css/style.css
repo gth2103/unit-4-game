@@ -1,0 +1,28 @@
+body{
+    color: #cccccc;
+    text-shadow: 1px 1px 2px black;
+}
+
+img {
+    max-height: 175px;
+    max-width: 175px;
+}
+
+h2 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #cccccc; 
+}
+.container {
+    background-image: url("../images/wallpaper.png");
+}
+
+.character {
+    max-height: 250px;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.character:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
