@@ -41,5 +41,3 @@ Star Wars RPG Game (Challenge)
 * No characters in the game can heal or recover life. 
 
   * A winning player must pick their characters wisely by first fighting an enemy with low `initialPower`. This will allow them to gain `power` and to take on enemies before they lose all of their `life`. Healing options would mess with this dynamic.
-
-* Players should be able to win and lose the game no matter what character they choose. The challenge should come from picking the right enemies, not choosing the strongest player.
