@@ -176,10 +176,13 @@ var displayWin = function(){
 }
 
 var checkMate = function(){
-	return (defender.life - attacker.power <= 0)
+	return (defender !=  null && defender.life - attacker.power <= 0)
 }
 
 
+var finalRound = function(){
+	return  (enemies.length == 0 && defender != null)
+}
 var win = function(){
   return (enemies.length == 0 && roundBegun && checkMate())
 }
@@ -187,6 +190,9 @@ var win = function(){
 var attack = function(){
 
 	$('.attack').on('click',  function(){
+		if(finalRound()){
+			gameOver = checkMate()
+		}
 		if(!gameOver){
 			roundBegun=!win();
 			if(okToAttack()){
@@ -214,6 +220,9 @@ var attack = function(){
 			else if (!okToAttack()){
 				displayNoEnemyFound();
 			}
+		}
+		else {
+			displayWin();
 		}
 	});
 }
