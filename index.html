@@ -20,6 +20,9 @@
              integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
              crossorigin="anonymous">
          </script>
+
+         <script src='./assets/javascript/game.js'></script>
+
          <link rel="stylesheet" href="./assets/css/style.css">
         <style>
         </style>
@@ -33,26 +36,26 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="row">
+                    <div class="row characters">
                         <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success character">
                             <header>Obi-Wan Kenobi</header>
                             <img src="./assets/images/obi.png" class="rounded" alt="Obi-Wan"><br>
-                            <span id="points">120</span> 
+                            <span class="life">120</span> 
                         </div>
                         <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success character">
                             <header>Luke Skywalker</header>
                             <img src="./assets/images/luke.png" class="rounded" alt="Skywalker"><br>
-                            <span id="points">100</span> 
+                            <span class="life">100</span> 
                         </div>
                         <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success character">
                             <header>Darth Sidious</header>
                             <img src="./assets/images/sidious.png" class="rounded" alt="Sidious"><br>
-                            <span id="points">150</span> 
+                            <span class="life">150</span> 
                         </div>
                         <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success character">
                             <header>Darth Maul</header>
                             <img src="./assets/images/maul.png" class="rounded" alt="Maul"><br>
-                            <span id="points">180</span> 
+                            <span class="life">180</span> 
                         </div>
                     </div>
                     <div class="row">
@@ -60,26 +63,11 @@
                             <h4>Your Character</h4>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success attacker">
-                            <header>Obi-Wan Kenobi</header>
-                            <img src="./assets/images/obi.png" class="rounded" alt="Obi-Wan"><br>
-                            <span id="points">120</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success attacker">
-                            <header>Luke Skywalker</header>
-                            <img src="./assets/images/luke.png" class="rounded" alt="Skywalker"><br>
-                            <span id="points">100</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success attacker">
-                            <header>Darth Sidious</header>
-                            <img src="./assets/images/sidious.png" class="rounded" alt="Sidious"><br>
-                            <span id="points">150</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success attacker">
-                            <header>Darth Maul</header>
-                            <img src="./assets/images/maul.png" class="rounded" alt="Maul"><br>
-                            <span id="points">180</span> 
+                    <div class="row attackers">
+                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success attacker hide">
+                            <header></header>
+                            <img src="" class="rounded" alt=""><br>
+                            <span class="life"></span> 
                         </div>
                     </div>
                 </div>
@@ -91,34 +79,14 @@
                             <h4>Enemies Available To Attack</h4>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-dark enemy">
-                            <header>Obi-Wan Kenobi</header>
-                            <img src="./assets/images/obi.png" class="rounded" alt="Obi-Wan"><br>
-                            <span id="points">120</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-dark enemy">
-                            <header>Luke Skywalker</header>
-                            <img src="./assets/images/luke.png" class="rounded" alt="Skywalker"><br>
-                            <span id="points">100</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-dark enemy">
-                            <header>Darth Sidious</header>
-                            <img src="./assets/images/sidious.png" class="rounded" alt="Sidious"><br>
-                            <span id="points">150</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-dark enemy">
-                            <header>Darth Maul</header>
-                            <img src="./assets/images/maul.png" class="rounded" alt="Maul"><br>
-                            <span id="points">180</span> 
-                        </div>
+                    <div class="row enemies">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col m-2">
                     <h4>Fight Section</h4>
-                    <button class="btn btn-outline-danger m-1">Attack</button>
+                    <button class="btn btn-outline-danger m-1 attack">Attack</button>
                 </div>
             </div>
             <div class="row">
@@ -128,28 +96,19 @@
                             <h4>Defender</h4>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success defender">
-                            <header>Obi-Wan Kenobi</header>
-                            <img src="./assets/images/obi.png" class="rounded" alt="Obi-Wan"><br>
-                            <span id="points">120</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success defender">
-                            <header>Luke Skywalker</header>
-                            <img src="./assets/images/luke.png" class="rounded" alt="Skywalker"><br>
-                            <span id="points">100</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success defender">
-                            <header>Darth Sidious</header>
-                            <img src="./assets/images/sidious.png" class="rounded" alt="Sidious"><br>
-                            <span id="points">150</span> 
-                        </div>
-                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success defender">
-                            <header>Darth Maul</header>
-                            <img src="./assets/images/maul.png" class="rounded" alt="Maul"><br>
-                            <span id="points">180</span> 
+                    <div class="row defenders">
+                        <div class="col-2 p-1 m-2 text-center d-inline rounded border border-success attacker hide">
+                            <header></header>
+                            <img src="" class="rounded" alt=""><br>
+                            <span class="life"></span> 
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m-2">
+                    <p class="results">
+                    </p>
                 </div>
             </div>
         </div>
